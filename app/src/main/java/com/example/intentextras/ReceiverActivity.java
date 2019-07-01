@@ -16,6 +16,16 @@ public class ReceiverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_receiver);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        String savedExtra=getIntent().getStringExtra("Zakia");
+        TextView tvName=(TextView) findViewById(R.id.tvName);
+        tvName.setText(savedExtra);
+        int saveExtra=getIntent().getIntExtra("Zakia",49);
+        TextView tvAge=(TextView)findViewById(R.id.tvAge);
+        tvAge.setText(savedExtra);
+
+//        int savedExtra=getIntent().getIntExtra("Zakia");
+//        TextView tvname=(TextView) findViewById(R.id.tvAge);
+//        tv.setText(savedExtra);
 //        TextView textView = (TextView) findViewById(R.id.tvName);
 //        textView.setText(text);
 

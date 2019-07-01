@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnSend;
     TextView tvName;
     TextView tvAge;
+    String name;
+    String age;
+
+    Intent myintent;
 
 
 
@@ -38,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(),ReceiverActivity.class));
-//                Intent Intentextras=new Intent(getApplication(),ReceiverActivity.class);
+                name=tvName.getText().toString();
+                age=tvAge.getText().toString();
+               Intent intent=new Intent(getBaseContext(),ReceiverActivity.class);
+               intent.putExtra("Zakia",46);
+               startActivity(intent);
 
-//                Toast.makeText(getApplicationContext(),"you have clicked a save button", Toast.LENGTH_LONG).show();
             }}
 
         );

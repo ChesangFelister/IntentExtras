@@ -19,22 +19,28 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:hint="Name"/>
+        android:layout_marginTop="30dp"   />
+        <!--android:hint="Name"-->
+        />
         <!--android:text="Name"/>-->
     <TextView
         android:id="@+id/tvAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Age"/>
+        android:layout_marginTop="60dp"   />
+        <!--android:hint="Age"-->
 
 
 
+    </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
