@@ -18,12 +18,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etName;
     EditText etAge;
     Button btnSend;
-    TextView tvName;
-    TextView tvAge;
-    String name;
-    String age;
 
-    Intent myintent;
+
 
 
 
@@ -36,14 +32,11 @@ public class MainActivity extends AppCompatActivity {
         etName=findViewById(R.id.etName);
         etAge=findViewById(R.id.etAge);
         btnSend=findViewById(R.id.btnSend);
-        tvName=findViewById(R.id.tvName);
-        tvAge=findViewById(R.id.tvAge);
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name=tvName.getText().toString();
-                age=tvAge.getText().toString();
+
                Intent intent=new Intent(getBaseContext(),ReceiverActivity.class);
                intent.putExtra("Zakia",46);
                startActivity(intent);
