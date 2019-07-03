@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class ReceiverActivity extends AppCompatActivity {
     TextView tvName;
     TextView tvAge;
+    String name;
+    String ages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +22,22 @@ public class ReceiverActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         tvName=findViewById(R.id.tvName);
         tvAge=findViewById(R.id.tvAge);
+        Bundle exras=getIntent().getExtras();
+        if (exras!=null){
+            String name= exras.getString("etName");
+            String age=exras.getString("etAge");
+            tvName.setText(name);
+            tvAge.setText(age);
+        }
 
-        String savedExtra=getIntent().getStringExtra("Zakia");
-        tvName.setText(savedExtra);
-        int saveExtra=getIntent().getIntExtra("Zakia",49);
-        tvAge.setText(savedExtra);
+//        String savedExtra=getIntent().getStringExtra("Zakia");
+//        tvName.setText(savedExtra);
+//        int saveExtra=getIntent().getIntExtra("Zakia",49);
+//        tvAge.setText(savedExtra);
 
-//        int savedExtra=getIntent().getIntExtra("Zakia");
-//        TextView tvname=(TextView) findViewById(R.id.tvAge);
-//        tv.setText(savedExtra);
+//        int saveExtra=getIntent().getIntExtra("Zakia",90);
+//        TextView tvAge=(TextView) findViewById(R.id.tvAge);
+//        tvAge.setText(savedExtra);
 //        TextView textView = (TextView) findViewById(R.id.tvName);
 //        textView.setText(text);
 

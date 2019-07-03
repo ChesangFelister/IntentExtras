@@ -29,16 +29,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        etName=findViewById(R.id.etName);
-        etAge=findViewById(R.id.etAge);
+
         btnSend=findViewById(R.id.btnSend);
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                etName=findViewById(R.id.etName);
+                etAge=findViewById(R.id.etAge);
 
                Intent intent=new Intent(getBaseContext(),ReceiverActivity.class);
-               intent.putExtra("Zakia",46);
+               String name=etName.getText().toString();
+               String age=etAge.getText().toString();
+               intent.putExtra("etName",name);
+               intent.putExtra("etAge",age);
                startActivity(intent);
 
             }}
